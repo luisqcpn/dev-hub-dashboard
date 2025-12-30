@@ -1,49 +1,39 @@
 # DevHub Dashboard
 
-Mini dashboard de desenvolvedores para demonstrar uma stack básica de front-end moderna:
+Aplicação web desenvolvida para explorar a construção de um dashboard modular, com ênfase em tipagem estática, separação de responsabilidades e gerenciamento de estado global.  
+O projeto aborda desde o consumo de uma API externa até a modelagem dos dados e a validação do comportamento da aplicação por meio de testes automatizados.
 
-- **Next 15** (App Router)
+## Stack utilizada
+
+- **Next.js 15** (App Router)
 - **React 19**
 - **TypeScript**
 - **Zustand** (estado global)
-- **styled-components** (estilização)
-- **Axios** (chamadas HTTP)
-- **Jest + Testing Library** (testes básicos)
+- **styled-components** (estilização e theming)
+- **Axios** (requisições HTTP)
+- **Jest + Testing Library** (testes unitários)
 
 ## Funcionalidades
 
-- Lista de desenvolvedores consumidos da API pública `jsonplaceholder.typicode.com`;
-- Conversão dos dados crus para um modelo `Dev` tipado com TypeScript;
-- Filtro por perfil: `frontend`, `backend`, `fullstack`;
-- Favoritar/desfavoritar devs usando **estado global com Zustand**;
-- Tema **claro/escuro** com **styled-components** + Zustand;
+- Consumo de dados a partir da API pública `jsonplaceholder.typicode.com`;
+- Mapeamento e tipagem dos dados em um modelo `Dev` utilizando TypeScript;
+- Filtro de desenvolvedores por perfil: `frontend`, `backend` e `fullstack`;
+- Favoritar e desfavoritar desenvolvedores utilizando **estado global com Zustand**;
+- Alternância de tema **claro/escuro** com **styled-components** + Zustand;
 - Testes unitários de componente (`DevCard`) e de store (`DevStore`).
 
-## Rodando o projeto
+## Executando o projeto localmente
 
 ```bash
 # instalar dependências
 npm install
 
-# subir o servidor de desenvolvimento
+# iniciar o servidor de desenvolvimento
 npm run dev
 
-# abrir no navegador
+# acessar no navegador
 # http://localhost:3000
 
-# rodar os testes
+# executar os testes
 npm test
-```
 
-## O que este projeto mostra para recrutadores
-
-- Uso de **Next.js 15** com estrutura de `app/`;
-- Código em **TypeScript** com tipos explícitos (`Dev`, `DevRole`, etc.);
-- Organização em camadas:
-  - `services/` para chamadas de API com **Axios**;
-  - `store/` para estado global com **Zustand**;
-  - `components/` com **styled-components**;
-- Noção de **Node/npm** (scripts, dependências, devDependencies);
-- Conhecimento básico de **testes com Jest** em componentes React e stores.
-
-Você pode forkar, ajustar o layout, mudar o tema ou trocar o domínio (por exemplo, em vez de devs, poderia ser catálogo de filmes, board de tarefas, etc.), mantendo a mesma stack pedida nas vagas.
